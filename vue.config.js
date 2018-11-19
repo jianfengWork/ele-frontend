@@ -1,3 +1,9 @@
+const path = require('path')
+
+function resolve(dir) { // 相对于vue.config.js的绝对路径，拼接
+  return path.join(__dirname, dir)
+}
+
 const appDate = require('./data.json')
 const seller = appDate.seller
 const goods = appDate.goods
@@ -41,5 +47,10 @@ module.exports = {
         })
       })
     }
+  },
+  chainWebpack(config) { // 地址简写
+    config.resolve.alias
+    .set('components', resolve('src/components'))
+    .set('assets', resolve('src/assets'))
   }
 }
