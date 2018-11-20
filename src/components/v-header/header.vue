@@ -53,7 +53,6 @@
 <style lang="stylus" scoped>
   @import '~assets/stylus/mixin'
   @import '~assets/stylus/variable'
-  
   .header
     position relative
     overflow hidden
@@ -97,7 +96,6 @@
           .text
             line-height 12px
             font-size $fontsize-small-s
-  
       .support-count
         position absolute
         right 12px
@@ -116,7 +114,6 @@
           margin-left 2px
           line-height 24px
           font-size $fontsize-small-s
-    
     .bulletin-wrapper
       position relative
       display flex

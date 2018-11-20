@@ -23,11 +23,9 @@
 <style lang="stylus" scoped>
   @import '~assets/stylus/mixin'
   // @import '~assets/stylus/varible'
-  
   .support-ico
     display inline-block
     background-repeat no-repeat
-  
   .icon-1
     width 12px
     height 12px
