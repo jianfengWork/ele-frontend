@@ -13,7 +13,7 @@
           {{ seller.description }}/{{ seller.deliveryTime }}分钟送达
         </div>
         <div class="support" v-if="seller.supports">
-          <support-ico :size="1" :type="seller.supports[0]" />
+          <support-ico :size="1" :type="seller.supports[0].type" />
           <span class="text">{{ seller.supports[0].description }}</span>
         </div>
       </div>
@@ -43,10 +43,10 @@
         default() {
           return {}
         }
-      },
-      components: {
-        SupportIco
       }
+    },
+    components: {
+      SupportIco
     }
   }
 </script>
@@ -143,6 +143,6 @@
       left 0
       width 100%
       height 100%
-      z-z-index -1
+      z-index -1
       filter blur(10px)
 </style>
