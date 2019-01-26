@@ -24,7 +24,7 @@
     </div>
 
     <div class="bulletin-wrapper">
-      <span class="bulletin-title"></span><span class="bulletin-text"></span>
+      <span class="bulletin-title"></span><span class="bulletin-text">{{ seller.bulletin }}</span>
       <i class="icon-keyboard_arrow_right" />
     </div>
 
