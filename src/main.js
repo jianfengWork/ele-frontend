@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import './cube-ui'
+import './mount'
 import App from './App.vue'
 
 // css
