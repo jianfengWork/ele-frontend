@@ -18,7 +18,7 @@
         type: Number
       }
     },
-    computed: {
+    computed: { // 被js执行 star-48 decrease on/half/off
       starType() {
         return 'star-' + this.size
       },

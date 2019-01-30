@@ -20,6 +20,7 @@
         @change="onChange"
       >
         <cube-slide-item v-for="(tab, index) in tabs" :key="index">
+          <!-- vue动态组件 -->
           <component ref="component" :is="tab.component" :data="tab.data"></component>
         </cube-slide-item>
       </cube-slide>
@@ -45,7 +46,7 @@
     data() {
       return {
         index: this.initialIndex,
-        slideOptions: {
+        slideOptions: { // scroll配置
           listenScroll: true,
           probeType: 3,
           directionLockThreshold: 0
@@ -86,11 +87,11 @@
 </script>
 
 <style lang="stylus" scoped>
-  @import "~common/stylus/variable"
+  @import "~assets/stylus/variable"
 
   .tab
     display: flex
-    flex-direction: column
+    flex-direction: column // 分配比例很重要，上下占比分配
     height: 100%
     >>> .cube-tab
       padding: 10px 0

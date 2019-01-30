@@ -61,6 +61,7 @@
   }
 </script>
 <style lang="stylus" scoped>
+  // ~符号是stylus-loader决定的
   @import '~assets/stylus/mixin'
   @import '~assets/stylus/variable'
   .header
