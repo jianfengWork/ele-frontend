@@ -21,7 +21,7 @@
       >
         <cube-slide-item v-for="(tab, index) in tabs" :key="index">
           <!-- vue动态组件 -->
-          <component ref="component" :is="tab.component" :data="tab.data"></component>
+          <component ref="component" :is="tab.component" :data="tab.data" />
         </cube-slide-item>
       </cube-slide>
     </div>
@@ -34,7 +34,7 @@
     props: {
       tabs: {
         type: Array,
-        default() {
+        default:() => {
           return []
         }
       },
@@ -78,7 +78,8 @@
       onChange(current) {
         this.index = current
         const instance = this.$refs.component[current]
-        if (instance && instance.fetch) {
+        // console.log(instance)
+        if (instance && instance.fetch) { // 调用每个组件fetch方法
           instance.fetch()
         }
       }
