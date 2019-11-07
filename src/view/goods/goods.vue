@@ -86,7 +86,7 @@
     props: {
       data: { // 通过tabs传递
         type: Object,
-        default() {
+        default: () => {
           return {}
         }
       }
@@ -119,7 +119,7 @@
       barTxts() {
         let ret = []
         this.goods.forEach((good) => {
-          const {type, name, foods} = good
+          const { type, name, foods } = good
           let count = 0
           foods.forEach((food) => {
             count += food.count || 0

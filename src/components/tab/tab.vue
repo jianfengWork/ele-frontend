@@ -34,7 +34,7 @@
     props: {
       tabs: {
         type: Array,
-        default:() => {
+        default: () => {
           return []
         }
       },

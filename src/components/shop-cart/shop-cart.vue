@@ -45,7 +45,7 @@
   function createBalls() {
     let balls = []
     for (let i = 0; i < BALL_LEN; i++) {
-      balls.push({show: false})
+      balls.push({ show: false })
     }
     return balls
   }
@@ -142,7 +142,7 @@
         }).show()
         e.stopPropagation()
       },
-      drop(el) {
+      drop(el) { // 元素按钮位置
         for (let i = 0; i < this.balls.length; i++) {
           const ball = this.balls[i]
           if (!ball.show) {
@@ -164,7 +164,7 @@
         inner.style.transform = inner.style.webkitTransform = `translate3d(${x}px,0,0)`
       },
       dropping(el, done) {
-        this._reflow = document.body.offsetHeight
+        this._reflow = document.body.offsetHeight // 浏览器重绘
         el.style.transform = el.style.webkitTransform = `translate3d(0,0,0)`
         const inner = el.getElementsByClassName(innerClsHook)[0]
         inner.style.transform = inner.style.webkitTransform = `translate3d(0,0,0)`
